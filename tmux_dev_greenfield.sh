@@ -33,14 +33,14 @@ then
   tmux new-window -n dev_db -t ${SESSION_NAME}
   tmux send-keys -t ${SESSION_NAME}:4 'psql' C-m
 
-  # logs server/client (5)
+  # dev logs server/client (5)
   tmux new-window -n dev_logs -t ${SESSION_NAME}
   tmux send-keys -t ${SESSION_NAME}:5 'tail -f logs/foo/*log' C-m
   tmux split-window -v -t ${SESSION_NAME}:5
   tmux send-keys -t ${SESSION_NAME}:5.1 'tail -f logs/bar/*log' C-m
 
   # dev test (6)
-  tmux new-window -n webpack_dev_server -t ${SESSION_NAME}
+  tmux new-window -n dev_test -t ${SESSION_NAME}
   tmux send-keys -t ${SESSION_NAME}:6 'npm test' C-m
 
   # Start out on the first window when we attach
