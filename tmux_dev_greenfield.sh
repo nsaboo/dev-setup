@@ -13,37 +13,37 @@ then
   # Create the session
   tmux new-session -s ${SESSION_NAME} -n install -d
 
-  # First window (0) 
+  # First window (1) 
   # install/build/general
   tmux send-keys -t ${SESSION_NAME} 'pwd' C-m
 
-  # git version control (1)
+  # git version control (2)
   tmux new-window -n git -t ${SESSION_NAME}
-  tmux send-keys -t ${SESSION_NAME}:1 'git status' C-m
+  tmux send-keys -t ${SESSION_NAME}:2 'git status' C-m
 
-  # dev server (2)
+  # dev server (3)
   tmux new-window -n dev_server -t ${SESSION_NAME}
-  tmux send-keys -t ${SESSION_NAME}:2 'npm run server-dev' C-m
+  tmux send-keys -t ${SESSION_NAME}:3 'npm run server-dev' C-m
 
-  # dev webpack (3)
+  # dev webpack (4)
   tmux new-window -n dev_webpack -t ${SESSION_NAME}
-  tmux send-keys -t ${SESSION_NAME}:3 'npm run ng-dev' C-m
+  tmux send-keys -t ${SESSION_NAME}:4 'npm run ng-dev' C-m
 
-  # dev database (4)
+  # dev database (5)
   tmux new-window -n dev_db -t ${SESSION_NAME}
-  tmux send-keys -t ${SESSION_NAME}:4 'psql' C-m
+  tmux send-keys -t ${SESSION_NAME}:5 'psql' C-m
 
-  # dev logs server/client (5)
+  # dev logs server/client (6)
   tmux new-window -n dev_logs -t ${SESSION_NAME}
-  tmux send-keys -t ${SESSION_NAME}:5 'tail -f logs/foo/*log' C-m
-  tmux split-window -v -t ${SESSION_NAME}:5
-  tmux send-keys -t ${SESSION_NAME}:5.1 'tail -f logs/bar/*log' C-m
+  tmux send-keys -t ${SESSION_NAME}:6 'tail -f logs/foo/*log' C-m
+  tmux split-window -v -t ${SESSION_NAME}:6
+  tmux send-keys -t ${SESSION_NAME}:6.1 'tail -f logs/bar/*log' C-m
 
-  # dev test (6)
+  # dev test (7)
   tmux new-window -n dev_test -t ${SESSION_NAME}
-  tmux send-keys -t ${SESSION_NAME}:6 'npm test' C-m
+  tmux send-keys -t ${SESSION_NAME}:7 'npm test' C-m
 
   # Start out on the first window when we attach
-  tmux select-window -t ${SESSION_NAME}:0
+  tmux select-window -t ${SESSION_NAME}:1
 fi
 tmux attach -t ${SESSION_NAME}
