@@ -9,6 +9,7 @@ gdbm
 heroku
 heroku-node
 icu4c
+jq
 kibana
 libevent
 libyaml
@@ -17,6 +18,7 @@ mongodb
 mysql
 node
 nvm
+oniguruma
 openssl
 openssl@1.1
 perl
