@@ -1,5 +1,7 @@
 awscli
 bash-completion
+docker-completion
+docker-compose-completion
 elasticsearch
 filebeat
 fzf
