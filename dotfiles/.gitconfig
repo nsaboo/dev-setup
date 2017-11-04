@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[user]
+  name = Nandakishore Saboo
+  email = nandakishoresaboo@gmail.com
+[core]
+  editor = vim
+	excludesfile = /Users/nsaboo/.gitignore
