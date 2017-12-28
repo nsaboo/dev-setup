@@ -16,3 +16,6 @@ brew cask list > $PWD/brew_cask_list
 
 # pip2 list
 pip2 list > $PWD/pip2_list
+
+# npm list
+npm list -g --depth=0 > $PWD/npm_list
