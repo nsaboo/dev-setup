@@ -1,6 +1,7 @@
 adns
 apm-bash-completion
 bash-completion
+brew-cask-completion
 docker-completion
 docker-compose-completion
 gdbm
