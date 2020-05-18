@@ -5,6 +5,9 @@
 
 PWD=~/dev/dev-setup/listfiles/
 
+# vscode list
+code --list-extensions > $PWD/code_list
+
 # atom list
 apm list -i -b > $PWD/apm_list
 

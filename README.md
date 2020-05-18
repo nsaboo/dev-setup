@@ -19,4 +19,7 @@ ln -s $HOME/dev/dev-setup/dotfiles/.tmux.conf $HOME/.tmux.conf
 
 ## link .vimrc in your $HOME dir
 ln -s $HOME/dev/dev-setup/dotfiles/.vimrc $HOME/.vimrc
+
+## link .bash_profile in your $HOME dir
+ln -s /Users/nsaboo/dev/dev-setup/dotfiles/.bash_profile $HOME/.bash_profile
 ```
