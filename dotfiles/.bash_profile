@@ -1,11 +1,17 @@
-# nvm
+# JAVA_HOME
+#export JAVA_HOME=/Library/Java/Home
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# nvm configuration
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
-# bash_completion
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+# bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
 
-# .bashrc
+# bashrc
 [[ -s ~/.bashrc ]] && source ~/.bashrc
 
 # .aliasrc
@@ -14,5 +20,8 @@ export NVM_DIR="$HOME/.nvm"
 # .minikube-completion
 [[ -s ~/.minikube-completion ]] && source ~/.minikube-completion
 
-# JAVA_HOME
-# export JAVA_HOME=/Library/Java/Home
+# kops completion
+source $HOME/.kops/completion.bash.inc
+
+# helm completion
+source $HOME/.helm/helm.completion.bash.inc

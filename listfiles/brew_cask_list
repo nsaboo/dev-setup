@@ -1,22 +1,25 @@
 adobe-acrobat-reader
-atom
 docker
 drawio
-etcher
 iterm2
-java8
-mongodb-compass
-mysqlworkbench
-minikube
+java
+microsoft-teams
 postman
-sdformatter
-sketch
-skype-for-business
 slack
-virtualbox
-virtualbox-extension-pack
 visual-studio-code
-vnc-viewer
 whatsapp
-yammer
-zoomus
+
+# unused ones now..
+# atom
+# etcher
+# imageoptim
+# intellij-idea
+# mongodb-compass
+# mysqlworkbench
+# sdformatter
+# sketch
+# virtualbox
+# vnc-viewer
+# webstorm
+# yammer
+# zoomus
